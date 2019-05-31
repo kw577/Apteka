@@ -1,0 +1,305 @@
+body
+{
+	background-color: #dedede; 
+	font-family: 'PT Sans', sans-serif; 
+	margin: 0 !important;
+}
+
+#container
+{
+	width: 100%;
+	margin-left: auto; 
+	margin-right: auto;
+	margin: 0px;
+	background-color:white;
+}
+
+
+
+#topbar
+{
+	width:100%;
+	background-color: #eaffec;
+	color: white;
+	padding: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+
+	display:flex;
+	justify-content: center;
+	align-items:center;
+
+}
+
+#topbarL
+{
+	float:left; 
+	padding: 10px;
+	width: 180px; 
+	text-align: center;
+	background-color:#eaffec;
+	
+}
+
+#topbarC
+{
+	float:left; 
+	width: 75%; 
+	text-align: center;
+	
+	padding:35px;
+	display:table-cell;
+	
+	
+}
+
+#topbarR
+{
+	float: left;
+
+	width: 10%; 
+	font-size: 16px;
+	text-align: justify; 
+	text-align: center;
+	color: black;
+}
+
+.imageLogo
+{
+	width:600px;
+	height: 160px;
+
+}
+
+.button
+{
+	
+	height: 25px; /*wysokosc div'a*/
+	font-size: 18px;
+	padding: 25px;
+	display: inline-block;
+}
+
+
+.button:hover
+{
+	background-color: #07892B; 
+	cursor: pointer; /*zmiana wygladu kursora po najechaniu na ten div*/
+}
+
+
+.bigtitle
+{
+	font-size: 32px;
+	font-weight: 900;
+	letter-spacing: 2px;
+	font-size: 40px;
+	color: black;
+}
+
+
+
+
+
+.menu
+{
+	background-color: #07892B; 
+	margin-top: 0px;
+
+	color: #ffffff; 
+	text-align: center;
+	
+}
+
+
+
+
+
+
+.search
+{
+	min-width: 130px; 
+	height: 25px; 
+	font-size: 18px;
+	padding: 10px;
+	
+	opacity: 0.8; 
+	display: inline-block;
+	
+	
+}
+
+
+input[type=text]
+{
+	width: 300px;
+	background-color: #efefef;
+	color: #888;
+	border: 2px solid #ddd;
+	border-radius: 5px; 
+	font-size: 15px;
+	padding: 10px;
+	box-sizing: border-box; 
+	outline: none; 
+
+}
+	
+	
+input[type=text]:focus
+{
+
+	border: 2px solid #5EBAE9; 
+	background-color: #DFEEF7; 
+	color: #3db049;
+}	
+
+
+
+.option
+{
+	
+	min-width: 130px; /*minimalna szerokosc*/
+	height: 25px; /*wysokosc div'a*/
+	font-size: 18px;
+	padding: 20px;
+	
+	
+	/*border - obramowanie dookola div'a - dotted - linia przerywana. solid - linia ciagla*/
+	opacity: 0.8; /*przezroczystosc*/
+	display: inline-block;
+}
+
+
+
+.option:hover
+{
+	background-color: #523e1d; 
+	cursor: pointer; /*zmiana wygladu kursora po najechaniu na ten div*/
+}
+
+
+
+
+
+
+
+.row
+{
+	display: flex; 
+	background-color: #efefef;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+#content
+{
+	padding: 10px;
+	width: 100%;
+	
+	min-height: 580px;
+	text-align: center;
+}
+
+
+.offer
+{
+	
+	width: 350px; 
+	height: 200px; 
+	font-size: 18px;
+	margin:10px;
+
+	background-color:white;
+	display: inline-block;
+}
+
+.offer:hover
+{
+	opacity: 0.75;
+}
+
+
+
+
+
+.photo
+{
+		float:left;
+	width: 170px; 
+	height: 170px; 
+	margin: 15px;
+
+	background-color:white;
+
+}
+
+
+
+.opis
+{
+	float:left;
+	width: 130px; 
+	height: 170px; 
+	margin: 15px;
+margin-left:0;
+	background-color:white;
+	text-align: left;
+	
+}
+
+
+
+.produkt
+{
+		
+	width: 100%; 
+	height: 100%; 
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#footer
+{
+	clear: both; 
+	color: white;
+	text-align: center;
+	padding: 20px;
+	font-size: 18px;
+	background-color: #07892B;
+}
+
+
+
+
+
+
+.sticky
+{
+	width: 100%;
+	position: fixed; 
+	left: 0; 
+	top: 0; 
+	z-index: 100; 
+}
