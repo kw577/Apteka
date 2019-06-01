@@ -80,12 +80,11 @@
 				<c:forEach items="${categoriesList}" var="category">
 
 										
-				<a href="#" class="buttonlink">
+				<a href="${contextRoot}/show/category/${category.id}/offer" class="buttonlink">
 						<div class="option">${category.name}</div>
 					</a>
 					
 				</c:forEach>
-				
 				
 				
 				
@@ -137,6 +136,17 @@
 	<c:if test="${isTermsPage == true }"> 
 		<%@include file="termsPage.jsp"%>
 	</c:if>	
+		
+		
+	<!-- Strona lista produktow wg kryteriow wyszukiwania -->	
+	<c:if test="${isShowOfferPage == true }"> 
+		<%@include file="offerPage.jsp"%>
+	</c:if>		
+		
+		
+		
+		
+		
 		
 		
 
