@@ -1,7 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%
+    response.setCharacterEncoding("UTF-8");
+    request.setCharacterEncoding("UTF-8");
+%>
 
 
 <c:set var="contextRoot" value="${pageContext.request.contextPath}"/>
@@ -37,9 +42,15 @@
 
 		
 		<div id="topbar">
+		
+			<a href="${contextRoot}/home" class="buttonlink">
 			<div id="topbarL">
-				<img src="${images}/mainPage_image.png" class="imageLogo"/>
+				
+					<img src="${images}/mainPage_image.png" class="imageLogo"/>
+				
 			</div>
+			</a>
+			
 			<div id="topbarC">
 				
 				
@@ -70,103 +81,60 @@
 				<div class="option">SUPLEMENTY</div>
 				<div class="option">KOSMETYKI</div>
 				<div class="option">ART. HIGIENICZNE</div>
-				<div class="option">KONTAKT</div>
+				
+				
+				
+				<a href="${contextRoot}/terms" class="buttonlink">
+					<div class="option">REGULAMIN</div>
+				</a>
 				
 				
 				<div style="clear:both;"></div> 
 			
 			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 		</div>
 		
 		
+	<!-- Strona startowa - opis aktualnych promocji -->	
+	<c:if test="${isStartPage == true }"> 
+		<%@include file="startPage.jsp"%>
+	</c:if>	
 		
 		
-		<div class="row">
-			
-			<div id="content">
-			
-				
-					<div class="offer">
-					
-						<div class="photo">
-								
-								<img src="${images}/produkt1.png" class="produkt"/>		
-					
-						</div>	
-						
-						<div class="opis">
-					
-							</br>
-							Pasta Sensodyne
-							</br>
-							</br>
-							Cena: 10zl
-							</br>
-							</br>
-							<div style="color: red;">-20%</div>
-					
-						</div>	
-					</div>
-				
-					<div class="offer">
-					
-						<div class="photo">
-								
-								<img src="${images}/produkt2.png" class="produkt"/>		
-					
-						</div>	
-						
-						<div class="opis">
-					
-							</br>
-							Zestaw witamin
-							</br>
-							</br>
-							Cena: 15zl
-							</br>
-							</br>
-							<div style="color: red;">-15%</div>
-					
-						</div>	
-					</div>
-				
-				
-								
-					<div class="offer">
-					
-						<div class="photo">
-								
-								<img src="${images}/produkt3.png" class="produkt"/>		
-					
-						</div>	
-						
-						<div class="opis">
-					
-							</br>
-							Magnez B6
-							</br>
-							</br>
-							Cena: 20zl
-							</br>
-							</br>
-							
-							<div style="color: red;">-15%</div>
-							
-					
-						</div>	
-					</div>
-				
-				
-				
-				<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-				
-				<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-								<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-				
-				<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-			</div>	
-		</div>	
-		<div id="footer">
+	<!-- Strona z regulaminem apteki -->	
+	<c:if test="${isTermsPage == true }"> 
+		<%@include file="termsPage.jsp"%>
+	</c:if>	
+		
+		
+
+	<div id="footer">
 			Projekt w ramach przedmiotu Technologie Internetowe &copy; 
 		</div>
 	

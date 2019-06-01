@@ -7,16 +7,33 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class PageController {
 
-	
-	@RequestMapping(value = {"/", "/home", "/index"})
-	public ModelAndView index() {
+	//strona glowna
+	@RequestMapping(value = {"/", "/home"})
+	public ModelAndView startPage() {
 		
 		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("greeting","Welcome to Spring Web MVC");
-		mv.addObject("title", "Online Shopping");
+		mv.addObject("title", "Home");
+		mv.addObject("isStartPage", true);
+		
 		return mv;
 		
 		
 	}
+	
+	
+	//strona z regulaminem zakupow
+	@RequestMapping(value = { "terms" })
+	public ModelAndView termsInfo() {
+
+		ModelAndView mv = new ModelAndView("page");
+		
+		mv.addObject("title", "Terms");
+		mv.addObject("isTermsPage", true);
+		return mv;
+
+	}
+	
+	
+	
 	
 }
