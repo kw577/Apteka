@@ -75,12 +75,18 @@
 					
 				</div>
 		
-	
-			
-				<div class="option">LEKI</div>
-				<div class="option">SUPLEMENTY</div>
-				<div class="option">KOSMETYKI</div>
-				<div class="option">ART. HIGIENICZNE</div>
+					
+				<!-- wczytanie listy kategorii ktore maja byc na pasku nawigacji - atrybut onNavbar w bazie danych -->
+				<c:forEach items="${categoriesList}" var="category">
+
+										
+				<a href="#" class="buttonlink">
+						<div class="option">${category.name}</div>
+					</a>
+					
+				</c:forEach>
+				
+				
 				
 				
 				

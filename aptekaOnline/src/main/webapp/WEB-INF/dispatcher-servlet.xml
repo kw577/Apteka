@@ -16,6 +16,10 @@
 	<context:component-scan
 		base-package="proj.kw.aptekaOnline.controller" />
 
+	<!-- Polaczenie z projektem backendu -->
+	<context:component-scan
+		base-package="proj.kw.aptekaBackend" />
+
 	<mvc:annotation-driven></mvc:annotation-driven>
 	<mvc:resources location="/assets/" mapping="resources/**"></mvc:resources>
 

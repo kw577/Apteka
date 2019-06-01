@@ -1,0 +1,4 @@
+INSERT INTO category (name, active, navbar) VALUES ('LEKI', true, true);
+INSERT INTO category (name, active, navbar) VALUES ('SUPLEMENTY', true, true);
+INSERT INTO category (name, active, navbar) VALUES ('KOSMETYKI', true, true);
+INSERT INTO category (name, active, navbar) VALUES ('ART. HIGIENICZNE', true, true);

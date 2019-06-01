@@ -1,0 +1,10 @@
+CREATE DATABASE apteka;
+USE apteka;
+
+CREATE TABLE `category` (
+	`id`			INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name`			VARCHAR(50) NOT NULL,
+	`active` 		BOOLEAN,
+	`navbar` 		BOOLEAN,
+	PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
