@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import proj.kw.aptekaBackend.dao.CategoryDAO;
+import proj.kw.aptekaBackend.dao.ProductDAO;
 
 @Controller
 public class PageController {
@@ -13,7 +14,8 @@ public class PageController {
 	@Autowired 
 	private CategoryDAO categoryDAO;
 	
-	
+	@Autowired // polaczenie z projektem Backendu 
+	private ProductDAO productDAO;
 	
 	
 	//strona glowna
@@ -26,6 +28,9 @@ public class PageController {
 		
 		//lista kategorii na pasku nawigacji
 		mv.addObject("categoriesList", categoryDAO.onNavbarList());
+		
+		//dodanie produktow krote sa na promocji
+		mv.addObject("discountsList", productDAO.getProductsDiscount());
 		
 		return mv;
 		

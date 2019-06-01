@@ -2,3 +2,18 @@ INSERT INTO category (name, active, navbar) VALUES ('LEKI', true, true);
 INSERT INTO category (name, active, navbar) VALUES ('SUPLEMENTY', true, true);
 INSERT INTO category (name, active, navbar) VALUES ('KOSMETYKI', true, true);
 INSERT INTO category (name, active, navbar) VALUES ('ART. HIGIENICZNE', true, true);
+
+
+
+
+
+INSERT INTO product (name, description, price, quantity, active, category_id, discount, image) VALUES ('Allegra', 'Allegra to lek, który działa przeciwalergicznie i łagodzi objawy alergii takie jak katar sienny, pokrzywka, kichanie i swędzenie nosa.', 10.50, 220, true, 1, 0, 'produkt_1.png');
+INSERT INTO product (name, description, price, quantity, active, category_id, discount, image) VALUES ('Cholinex', 'Preparat stosowany w stanach zapalnych błony śluzowej jamy ustnej i gardła.', 12.90, 150, true, 1, 0, 'produkt_2.png');
+INSERT INTO product (name, description, price, quantity, active, category_id, discount, image) VALUES ('APAP', 'APAP jest lekiem przeciwbólowym i przeciwgorączkowym. Zawiera jako substancję czynną paracetamol.', 7.80, 120, true, 1, 0, 'produkt_3.png');
+INSERT INTO product (name, description, price, quantity, active, category_id, discount, image) VALUES ('CENTRUM SILVER 50+', 'Centrum Silver 50+ to kompletny zestaw witamin i minerałów z luteiną opracowany specjalnie z myślą o zmieniających się potrzebach organizmu osób po 50. roku życia', 24.50, 80, true, 2, 10, 'produkt_4.png');
+INSERT INTO product (name, description, price, quantity, active, category_id, discount, image) VALUES ('LOMA VITAL', 'Loma Vital suplement diety w postaci płynu zapewnia przyjmowanie odpowiedniej dawki żelaza i cynku, wzmacnia witalność. Loma Vital zawiera substancje słodzące oraz jest wzbogacony w witaminy: biotynę, B1, B2, B6, B12 i witaminę C.', 34.00, 50, true, 2, 0, 'produkt_5.png');
+INSERT INTO product (name, description, price, quantity, active, category_id, discount, image) VALUES ('NIZORAL', 'Nizoral w postaci szamponu leczniczego jest lekiem przeciwgrzybiczym do stosowania miejscowego na skórę. Lek zawiera substancję czynną ketokonazol. Lek Nizoral, szampon leczniczy jest wskazany w leczeniu i profilaktyce chorób skóry', 20.00, 150, true, 3, 0, 'produkt_6.png');
+INSERT INTO product (name, description, price, quantity, active, category_id, discount, image) VALUES ('MoliCare Skin', 'MoliCare Skin krem do rąk intensywnie nawilża i chroni skórę dłoni.', 12.00, 110, true, 3, 0, 'produkt_7.png');
+INSERT INTO product (name, description, price, quantity, active, category_id, discount, image) VALUES ('Pasta Sensodyne', 'Sensodyne Classic pasta do zębów to specjalistyczna pasta z fluorkiem do wrażliwych zębów.', 16.00, 70, true, 4, 20, 'produkt_8.png');
+
+INSERT INTO product (name, description, price, quantity, active, category_id, discount, image) VALUES ('Zestaw kosmetyków', 'Zestaw przeznaczony do codziennej higieny i pielęgnacji skóry normalnej oraz wrażliwej. Zawiera cenne dla skory witaminy i minerały.', 24.00, 70, true, 4, 25, 'produkt_9.png');
