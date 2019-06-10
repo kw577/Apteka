@@ -14,9 +14,14 @@
 				
 				<!-- Lista produktow na promocji -->
 				<c:forEach items="${discountsList}" var="discount">
+					
+					
+					
+					
 									
 					<div class="offer">
-					
+						<a href="${contextRoot}/view/id/${discount.id}/product" class="buttonlink2">
+						<div class="blockLink">
 						<div class="photo">
 								
 								<img src="${images}/${discount.image}" class="produkt"/>		
@@ -36,9 +41,11 @@
 							<div style="color: red;">-${discount.discount}%</div>
 							
 					
-						</div>	
+						</div>
+						</div>		
+						</a>
 					</div>
-					
+				
 				</c:forEach>
 				
 				

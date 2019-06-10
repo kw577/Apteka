@@ -10,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 import proj.kw.aptekaBackend.dao.CategoryDAO;
 import proj.kw.aptekaBackend.dao.ProductDAO;
 import proj.kw.aptekaBackend.dto.Category;
+import proj.kw.aptekaBackend.dto.Product;
 
 @Controller
 public class PageController {
@@ -111,6 +112,26 @@ public class PageController {
 
 	}
 	
+	
+	
+	@RequestMapping(value = "/view/id/{id}/product")
+	public ModelAndView showSingleProduct(@PathVariable int id) {
+		ModelAndView mv = new ModelAndView("page");
+
+		Product product = null;
+		product = productDAO.get(id);
+
+		//lista kategorii na pasku nawigacji
+		mv.addObject("categoriesList", categoryDAO.onNavbarList());
+		
+		
+
+		mv.addObject("product", product);
+
+		mv.addObject("productDetailsPage", true); 
+
+		return mv;
+	}
 	
 	
 	

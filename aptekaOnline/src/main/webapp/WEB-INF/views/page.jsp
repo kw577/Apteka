@@ -151,8 +151,11 @@
 		<%@include file="searchOfferPage.jsp"%>
 	</c:if>	
 		
-		
-		
+	<!-- Strona podgladu produktu -->
+	<c:if
+		test="${productDetailsPage == true}">
+		<%@include file="detailedOffer.jsp"%>
+	</c:if>	
 		
 
 	<div id="footer">
