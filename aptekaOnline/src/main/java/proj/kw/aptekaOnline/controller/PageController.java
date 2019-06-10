@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import proj.kw.aptekaBackend.dao.CategoryDAO;
@@ -80,6 +81,37 @@ public class PageController {
 				
 		return mv;
 }
+	
+	
+	
+	
+	/*
+	 * Wyswietla oferte wg podanego slowa kluczowego
+	 */
+	@RequestMapping(value = { "offer/search" }) 
+	public ModelAndView searchProductsWithCriteria(
+			@RequestParam("searchPhrase") String searchPhrase) {
+
+
+		String searchCriteria;
+		searchCriteria = "?searchPhrase=" + searchPhrase;
+
+		ModelAndView mv = new ModelAndView("page");
+				
+		mv.addObject("isSearchOfferPage", true);
+		mv.addObject("searchingCriteria", searchCriteria);
+		
+		//lista kategorii na pasku nawigacji
+		mv.addObject("categoriesList", categoryDAO.onNavbarList());
+		
+		mv.addObject("title", "Search offer");
+		
+		
+		return mv;
+
+	}
+	
+	
 	
 	
 	

@@ -21,9 +21,8 @@ public interface ProductDAO {
 	
 	//zwraca liste produktow na promocji
 	List<Product> getProductsDiscount();
-	
-	
-	
-	
+		
+	//zwraca liste produktow wg slowa kluzowego
+	List<Product> listActiveProductByKeyword(String searchPhrase);
 
 }

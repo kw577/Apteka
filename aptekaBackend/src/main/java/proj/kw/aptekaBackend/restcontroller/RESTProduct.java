@@ -75,4 +75,19 @@ public class RESTProduct implements ProductDAO{
 				.getResultList();
 	}
 
+	@Override
+	public List<Product> listActiveProductByKeyword(String searchPhrase) {
+
+		System.out.println("Product DAO - wyszukaj: " + searchPhrase);
+		
+		
+		String query = "FROM Product WHERE name LIKE :searchPhrase OR description LIKE :searchPhrase";
+		return sessionFactory
+				.getCurrentSession()
+					.createQuery(query,Product.class)
+						.setParameter("searchPhrase", "%"+searchPhrase+"%")
+							.getResultList();
+		
+	}
+
 }

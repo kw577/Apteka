@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<%@taglib prefix="sf" uri="http://www.springframework.org/tags" %>
 <%
     response.setCharacterEncoding("UTF-8");
     request.setCharacterEncoding("UTF-8");
@@ -69,10 +69,12 @@
 		
 		
 				<div class="search">
-						
-						<input type="text" id="name" placeholder="Szukaj...">
-						<button type="submit"><i class="fa fa-search"></i></button>
+					<form action="<sf:url value="http://localhost:8080/aptekaOnline/offer/search"/>">
 					
+						<input type="text" id="name" name="searchPhrase" value="${param.searchPhrase}" placeholder="Szukaj...">
+
+						<button type="submit"><i class="fa fa-search"></i></button>
+					</form>
 				</div>
 		
 					
@@ -144,7 +146,10 @@
 	</c:if>		
 		
 		
-		
+	<!-- Strona z wynikami wyszukiwania wg wyszukiwanej frazy-->	
+	<c:if test="${isSearchOfferPage == true }"> 
+		<%@include file="searchOfferPage.jsp"%>
+	</c:if>	
 		
 		
 		
