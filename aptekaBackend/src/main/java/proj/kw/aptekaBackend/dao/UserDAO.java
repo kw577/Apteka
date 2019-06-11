@@ -7,6 +7,8 @@ public interface UserDAO {
 	// add an user
 	boolean addUser(User user);
 
+	User getByEmail(String email);
+
 
 
 

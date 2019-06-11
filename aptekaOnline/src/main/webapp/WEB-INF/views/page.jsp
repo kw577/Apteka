@@ -3,6 +3,8 @@
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="sf" uri="http://www.springframework.org/tags" %>
+<%@taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
+
 <%
     response.setCharacterEncoding("UTF-8");
     request.setCharacterEncoding("UTF-8");
@@ -56,9 +58,26 @@
 			</div>	
 			
 			<div id="topbarR">
-				<div class="button">Logowanie</div>
+				<!-- Przyciski logowania i rejestracji - widoczne dla niezalogowanego uzytkownika -->
+				<security:authorize access="isAnonymous()">
+					<a href="${contextRoot}/login" class="buttonlink2"><div class="button">Logowanie</div></a>
+					<a href="${contextRoot}/register" class="buttonlink2"><div class="button">Rejestracja</div></a>
+				</security:authorize>	
 				
-				<a href="${contextRoot}/register" class="buttonlink2"><div class="button">Rejestracja</div></a>
+				
+				<!-- Przyciski wyswietlane dla zalogowanego uzytkownika -->
+				<security:authorize access="isAuthenticated()">
+				<div>${userModel.fullName}</div>
+				<a href="${contextRoot}/cart/userCart" class="buttonlink2"><div class="button">Koszyk</div></a>
+				<a href="${contextRoot}/logout" class="buttonlink2"><div class="button">Wyloguj</div></a>
+				
+				
+				</security:authorize>
+				
+				<script>
+					window.userRole = '${userModel.role}';
+				</script>
+				
 				
 			</div>
 			<div style="clear:both;"></div> 

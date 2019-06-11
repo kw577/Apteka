@@ -32,5 +32,26 @@ public class RESTUser implements UserDAO{
 		}
 	}
 	
+	
+	@Override
+	public User getByEmail(String email) {
+		
+		String selectQuery = "FROM User WHERE email = :email";
+		
+		try {
+			return sessionFactory.getCurrentSession()
+					.createQuery(selectQuery, User.class)
+					.setParameter("email", email)
+					.getSingleResult();
+		}
+		catch (Exception ex) {
+			//System.out.println("\n\n\n\nBrak wynikow!!!");
+			//ex.printStackTrace();
+			return null;
+		}
+		
+		
+		
+	}
 		
 }
