@@ -206,5 +206,28 @@ public class PageController {
 			
 
 		}
+		
+		
+		
+		@RequestMapping(value = "/cart/add/id/{id}/product")
+		public ModelAndView addToCart(@PathVariable int id) {
+			ModelAndView mv = new ModelAndView("page");
+
+			Product product = null;
+			product = productDAO.get(id);
+
+			//lista kategorii na pasku nawigacji
+			mv.addObject("categoriesList", categoryDAO.onNavbarList());
+			
+			
+
+			mv.addObject("product", product);
+
+			mv.addObject("addToCartPage", true); 
+						
+			return mv;
+		}
+		
+		
 	
 }

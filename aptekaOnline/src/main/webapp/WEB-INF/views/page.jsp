@@ -192,6 +192,12 @@
 	</c:if>	
 	
 	
+	<!-- Dodanie produktu do koszyka -->
+	<c:if
+		test="${addToCartPage == true}">
+		<%@include file="addToCartPage.jsp"%>
+	</c:if>
+	
 	
 	
 
@@ -310,6 +316,12 @@ if($registerForm.length) {
 }
 </script>
 
+	
+	
+	
+	
+	
+	
 	
 </body>
 </html>
