@@ -39,6 +39,7 @@ CREATE TABLE `user` (
 	`address`		VARCHAR(50) NOT NULL,
 	`password`		VARCHAR(50) NOT NULL,
 	`role`			VARCHAR(50) NOT NULL,
+	`enabled` 		BOOLEAN,
 
 	PRIMARY KEY (`id`)
 

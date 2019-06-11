@@ -178,7 +178,7 @@ public class PageController {
 			System.out.println("New user role: " + nUser.getRole());
 			
 			nUser.setRole("USER");
-			
+			nUser.setEnabled(true);
 			// create a new product record
 			userDAO.addUser(nUser);
 			

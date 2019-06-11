@@ -40,7 +40,7 @@
 			<!-- Pozostale atrubuty klasy User.java ustawione jako "hidden" -->
 			<sform:hidden path="id"/>
 			<sform:hidden path="role"/>
-			
+			<sform:hidden path="enabled"/>
 		</sform:form>
 
 	</div>
