@@ -19,7 +19,7 @@
 			</div>
 			<table class="table">
 				
-				<tr><td>e-mail:</td> <td> <input type="email" name="email" id="email"/></td></tr>
+				<tr><td>e-mail:</td> <td> <input type="text" name="username" id="username"/></td></tr>
 
 				<tr><td>Hasło:</td> <td> <input type="password" name="password" id="password"/></td></tr>
 				
