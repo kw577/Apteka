@@ -188,6 +188,23 @@ public class PageController {
 
 
 		
-		
+		// strona logowania
+		@RequestMapping(value = { "/login" })
+		public ModelAndView login() {
+
+			
+			ModelAndView mv = new ModelAndView("page");
+			mv.addObject("title", "Login");
+			mv.addObject("isLoginPage", true);
+			
+						
+			//lista kategorii na pasku nawigacji
+			mv.addObject("categoriesList", categoryDAO.onNavbarList());
+						
+			return mv;
+			
+			
+
+		}
 	
 }

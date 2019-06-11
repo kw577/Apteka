@@ -164,6 +164,17 @@
 		test="${isRegisterPage == true}">
 		<%@include file="register.jsp"%>
 	</c:if>	
+	
+	
+	<!-- Strona logowania -->
+	<c:if
+		test="${isLoginPage == true}">
+		<%@include file="login.jsp"%>
+	</c:if>	
+	
+	
+	
+	
 
 	<div id="footer">
 			Projekt w ramach przedmiotu Technologie Internetowe &copy; 

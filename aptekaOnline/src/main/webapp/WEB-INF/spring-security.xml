@@ -11,10 +11,17 @@
 
 	<context:component-scan base-package="proj.kw.aptekaBackend"/>
 
+	<!-- Nalezy dodac ta linijka aby zawsze byl zapewniony dostep do pliku z folderu resources np pliki. - js   .css     -->
+	<http pattern="/resources/**" security="none"/>
+
 
 	<http>
-		<intercept-url pattern="/**" access="hasAuthority('USER')" />
-		<form-login />
+		<csrf disabled="true"/>
+		<!-- only user access (who is registered) -->
+		<intercept-url pattern="/view/**" access="hasAuthority('USER')" />
+		<!-- do reszty zasobow wszyscy maja dostep) -->
+		<intercept-url pattern="/**" access="permitAll" />
+		<form-login login-page="/login" />
 		<logout />
 	</http>
 	

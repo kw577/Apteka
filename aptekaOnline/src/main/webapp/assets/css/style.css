@@ -566,3 +566,8 @@ table#table1 {
 .registerContainer{
 	margin: 20px;
 }
+
+.loginContainer{
+	margin: 20px;
+	margin-bottom: 100px;
+}
