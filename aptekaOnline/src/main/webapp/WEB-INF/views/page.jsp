@@ -8,7 +8,6 @@
     request.setCharacterEncoding("UTF-8");
 %>
 
-
 <c:set var="contextRoot" value="${pageContext.request.contextPath}"/>
 
 
@@ -58,7 +57,9 @@
 			
 			<div id="topbarR">
 				<div class="button">Logowanie</div>
-				<div class="button">Rejestracja</div>
+				
+				<a href="${contextRoot}/register" class="buttonlink2"><div class="button">Rejestracja</div></a>
+				
 			</div>
 			<div style="clear:both;"></div> 
 		</div>
@@ -157,6 +158,12 @@
 		<%@include file="detailedOffer.jsp"%>
 	</c:if>	
 		
+		
+	<!-- Rejestracja nowego uzytkownika -->
+	<c:if
+		test="${isRegisterPage == true}">
+		<%@include file="register.jsp"%>
+	</c:if>	
 
 	<div id="footer">
 			Projekt w ramach przedmiotu Technologie Internetowe &copy; 
@@ -167,6 +174,9 @@
 
 	
 	<script src="${js}/jquery-1.11.3.min.js"></script>
+	
+	<!-- jQuery validator -->
+	<script src="${js}/jquery.validate.js"></script>
 	
 	<script>
 		$(document).ready(function() {
@@ -193,6 +203,83 @@
 	</script>
 	
 	
+	
+<script>
+$registerForm = $('#registerForm'); 
+if($registerForm.length) {
+	$registerForm.validate({			
+			rules: {
+				name: {
+					required: true,
+					minlength: 3
+				},
+				surname: {
+					required: true,
+					minlength: 3
+				},
+				email: { 
+					required: true,
+					minlength: 5					
+				},
+				address: { 
+					required: true,
+					minlength: 3					
+				},
+				password: { 
+					required: true,
+					minlength: 5					
+				},
+				repeatPassword: { 
+					equalTo: "#password"				
+				},
+				acceptTerms: { 
+					required: true					
+				}
+			},
+			messages: {					
+				name: {
+					required: 'Podaj swoje imię!',
+					minlength: 'Imię musi mieć co najmniej 3 znaki'
+				},
+				surname: {
+					required: 'Podaj swoje nazwisko!',
+					minlength: 'Nazwisko musi mieć co najmniej 3 znaki'
+				},
+				email: {
+					required: 'Podaj swój adres email!',
+					minlength: 'Pole musi mieć co najmniej 5 znaków'
+				},	
+				address: {
+					required: 'Podaj swój adres!'
+				},
+				password: {
+					required: 'Podaj swoje hasło!',
+					minlength: 'Hosło musi mieć długośc co najmniej 5 znaków'
+				},
+				repeatPassword: {
+					equalTo: 'Podane hasła nie są zgodne!'
+			
+				},
+				acceptTerms: {
+					equalTo: 'Musisz zaakceptować warunki regulaminu!'
+			
+				}	
+				
+				
+				
+			},
+			errorElement : "em",
+			errorPlacement : function(error, element) {
+				error.addClass('help-block');
+				
+				error.insertAfter(element);
+				
+			}				
+		}
+	);
+}
+</script>
+
 	
 </body>
 </html>

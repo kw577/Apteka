@@ -1,4 +1,4 @@
-CREATE DATABASE apteka;
+﻿CREATE DATABASE apteka;
 USE apteka;
 
 CREATE TABLE `category` (
@@ -31,4 +31,15 @@ CREATE TABLE `product` (
 
 
 
-INSERT INTO product (name, description, price, quantity, active, category_id, discount, image) VALUES ('Allegra', 'Allegra to lek, który działa przeciwalergicznie i łagodzi objawy alergii takie jak katar sienny, pokrzywka, kichanie i swędzenie nosa.', 10.50, 220, true, 1, 0, produkt_1);
+CREATE TABLE `user` (
+	`id` 			INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name`			VARCHAR(50) NOT NULL,
+	`surname`		VARCHAR(50) NOT NULL,
+	`email`			VARCHAR(50) NOT NULL,
+	`address`		VARCHAR(50) NOT NULL,
+	`password`		VARCHAR(50) NOT NULL,
+	`role`			VARCHAR(50) NOT NULL,
+
+	PRIMARY KEY (`id`)
+
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;	

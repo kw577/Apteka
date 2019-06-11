@@ -130,7 +130,7 @@ body
 }
 
 
-input[type=text]
+input[type=text],[type=email],[type=password]
 {
 	width: 300px;
 	background-color: #efefef;
@@ -153,7 +153,21 @@ input[type=text]:focus
 	color: #3db049;
 }	
 
+input[type=email]:focus
+{
 
+	border: 2px solid #5EBAE9; 
+	background-color: #DFEEF7; 
+	color: #3db049;
+}	
+
+input[type=password]:focus
+{
+
+	border: 2px solid #5EBAE9; 
+	background-color: #DFEEF7; 
+	color: #3db049;
+}	
 
 .option
 {
@@ -331,7 +345,7 @@ table#table1 {
 
 }
 
-th {
+#table1 th {
   padding: 8px;
   text-align: left;
    border-bottom: 3px solid black; 
@@ -339,13 +353,13 @@ th {
   color: black;
 }
 
-td {
+#table1 td {
   padding: 8px;
   text-align: left;
   border-bottom: 1px solid black;
 }
 
-tr:hover {background-color:#f5f5f5;}
+#table1 tr:hover {background-color:#f5f5f5;}
 
 /*formatowanie obrazkow w tabeli*/
 .dataTableImg {
@@ -528,4 +542,27 @@ tr:hover {background-color:#f5f5f5;}
 	font-size: 15px;
 	border-bottom: 1px solid #444444;
 
+}
+
+
+/*Strona rejestracji konta*/
+
+.registerButton
+{
+	width:40%;
+	padding: 8px;
+	text-align: center;
+	font-size: 15px;
+	color: white;
+	text-decoration: none;
+	background-color: #3232FF;
+
+
+	border-radius: 7px; 
+	
+	display: inline-block;
+}
+
+.registerContainer{
+	margin: 20px;
 }

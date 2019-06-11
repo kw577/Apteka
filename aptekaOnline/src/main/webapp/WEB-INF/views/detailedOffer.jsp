@@ -40,8 +40,7 @@
 
 	<div class="actionButtons">
 
-		<a href="${contextRoot}/home" class="backButton">POWRÓT</a>
-
+		<a onclick="window.history.back();" class="backButton">POWRÓT</a>
 		<a href="${contextRoot}/cart/add/id/${product.id}/product" class="orderButton">KUPUJĘ</a>
 
 	</div>
