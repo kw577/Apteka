@@ -50,11 +50,11 @@
 
 					
 					<div class="reservationFormInput">
-						<input type="submit" value="Reservation">
+						<input type="submit" value="Dodaj do koszyka" class="buyButton">
 					</div>
 					<div class="reservationFormInput">
 
-						<a href="${contextRoot}/home" class="cancelButton">Cancel</a>
+						<a onclick="window.history.back();" class="cancelButton">Anuluj zakup</a>
 
 					</div>
 
@@ -74,7 +74,7 @@
 			
 			var wynik = amount * ${product.price};
 			
-			document.getElementById('calculationResult').innerHTML = "Cena całkowita wynosi: " + wynik + "PLN";
+			document.getElementById('calculationResult').innerHTML = "Koszt całkowity: " + wynik + " PLN";
 		
 			
 		}

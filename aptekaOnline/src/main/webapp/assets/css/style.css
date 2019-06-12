@@ -673,7 +673,14 @@ table#table1 {
 
 }
 
+#calculationResult
+{
+	
 
+	min-width: 300px; 
+	text-align: left;
+	
+}
 
 .cancelButton
 {
@@ -695,12 +702,40 @@ table#table1 {
 }
 
 
-
 .cancelButton:hover
 {
 	background-color: #DC2C00; 
 	cursor: pointer; 
 }
+
+
+.buyButton
+{
+	width: 280px;
+	background-color: #07892B;
+	font-size:20px;
+	color: white;
+	text-align: center;
+	padding: 15px 10px;
+
+	margin-top: 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer; 
+	letter-spacing: 2px; 
+
+	text-decoration: none;
+	display: block;
+	
+		
+}
+
+.buyButton:hover
+{
+	background-color: #00B400; 
+	cursor: pointer; 
+}
+
 
 
 .row2

@@ -18,7 +18,7 @@
 	<http>
 		<csrf disabled="true"/>
 		<!-- only user access (who is registered) -->
-		<intercept-url pattern="/view/**" access="hasAuthority('USER')" />
+		<intercept-url pattern="/cart/**" access="hasAuthority('USER')" />
 		<!-- do reszty zasobow wszyscy maja dostep) -->
 		<intercept-url pattern="/**" access="permitAll" />
 		<form-login login-page="/login" />
